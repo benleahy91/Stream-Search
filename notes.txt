@@ -1,0 +1,95 @@
+Header
+	Logos next to each other
+
+What to watch?
+	Check streaming services you have
+	Check TV or Movie
+	Check genre
+	Check length
+	Check ratings
+
+Populate results
+	Check API with selected criteria
+	Display top 10 options
+		Title
+		Poster
+		Genre
+		Synopsis
+		Rating
+		Length
+		IMDB Rating
+
+
+Exit out of options and replace with another?
+Add to list to watch later
+	Firebase
+
+var guideboxData;
+var GUIDEBOXAPI = config.GUIDEBOXAPIKEY;
+
+window.onload = function() {
+
+$("#submit").on("click", function(event){
+	event.preventDefault();
+	var url = "";
+	// var guideboxData = "";
+
+	function movieTV() {
+		if ($("#select-movie").is(":checked")) {
+			url = `http://api-public.guidebox.com/v2/movies?sources=free&sources=subscription&api_key=${GUIDEBOXAPI}&limit=250`;
+			streamServicesMovie();
+			checkGuidebox();
+		}
+		else if ($("#select-tv").is(":checked")) {
+			url = `http://api-public.guidebox.com/v2/shows?api_key=${GUIDEBOXAPI}&limit=250`;
+			streamServicesTV();
+			checkGuidebox();
+		}
+	}
+	function streamServicesTV() {
+		var streams = $("[name='select-services']:checked");
+		var streamArray = [];
+		streams.each(function(){
+			var checkedStreams =($(this).attr("value"));
+			streamArray.push(checkedStreams);
+		});
+
+		url = url + "&sources=";
+		streamURL = streamArray.map(stream => stream + ",").join();
+		url = url + streamURL;
+	}
+
+	function streamServicesMovie() {
+		var streams = $("[name='select-services']:checked");
+		var streamArray = [];
+		streams.each(function(){
+			var checkedStreams = ($(this).attr("value"));
+			streamArray.push(checkedStreams);
+		});
+		var streamURL = streamArray.map(stream => "&sources=" + stream);
+		streamURL = streamURL.join('');
+		url = url + streamURL;
+	}
+
+function checkGuidebox() {
+		fetch(url, {mode: 'cors'})
+			.then(function (resp) {
+				return resp.json()
+			})
+			.then(function(data) {
+				// console.log(data.results);
+				guideboxData = data.results;
+				// console.log(guideboxData);
+				return data;
+			})
+			.catch(function (error) {
+				console.log(error);
+		});
+	}
+
+	movieTV();
+	// console.log(guideboxData);
+
+});
+
+}
