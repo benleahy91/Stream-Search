@@ -1,4 +1,4 @@
 var config = {
   GUIDEBOXAPIKEY: "57199f12d05380f9971970785cb6b99ee564afb9",
   OMDBAPIKEY: "d705b7a7"
-}
+};

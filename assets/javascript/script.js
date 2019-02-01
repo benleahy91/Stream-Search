@@ -38,7 +38,7 @@ function callOMDB (searchResults, response) {
 		url = `http://www.omdbapi.com/?apikey=${OMDBAPI}&i=${imdbArray[i]}`;
 		getMovies2(url, response);
 	};
-}
+};
 
 function getMovies(apiUrl, searchResults) {
 	fetch(apiUrl, { mode: 'cors' })
@@ -81,9 +81,7 @@ function omdbData(data) {
 };
 
 function ratingGenre(data) {
-	// console.log(data)
 	var omdbArray = data;
 	console.log(omdbArray);
 	console.log(omdbArray[1].title);
-
 };

@@ -3,157 +3,109 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
 	</head>
 
 	<body>
 		<div class="container text-white">
-			
 			<div class="row">
 				<h1 class="col-md-12 text-center"> StreamSearch </h1> <br>
 				<h3 class="col-md-12 text-center"> Search the Rest to Find the Best </h3>
 			</div>
-
 			<div>
 				<form>
 					<p> What streaming services do you have?</p>
 					<div class="form-check">
 						<input class ="form-check-input" type="checkbox" value="netflix" name="select-services" id="has-netflix">
-						<label class="form-check-label" for="has-netflix">
-							Netflix
-						</label>
+						<label class="form-check-label" for="has-netflix">Netflix</label>
 					</div>
 					<div class="form-check">
 						<input class ="form-check-input" type="checkbox" value="hulu_plus" name="select-services" id="has-hulu">
-						<label class="form-check-label" for="has-hulu">
-							Hulu Plus
-						</label>
+						<label class="form-check-label" for="has-hulu">Hulu Plus</label>
 					</div>
 					<div class="form-check">
 						<input class ="form-check-input" type="checkbox" value="amazon_prime" name="select-services" id="has-amazon">
-						<label class="form-check-label" for="has-amazon">
-							Amazon Prime
-						</label>
+						<label class="form-check-label" for="has-amazon">Amazon Prime</label>
 					</div>
 					<div class="form-check">
 						<input class ="form-check-input" type="checkbox" value="hbo" name="select-services" id="has-hbo">
-						<label class="form-check-label" for="has-hbo">
-							HBO GO
-						</label>
+						<label class="form-check-label" for="has-hbo">HBO GO</label>
 					</div>
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" value="showtime_subscription" name="select-services" id="has-showtime">
-						<label class="form-check-label" for="has-showtime">
-							Showtime
-						</label>
+						<label class="form-check-label" for="has-showtime">Showtime</label>
 					</div>
-
 					<br>
 					<p>Do you want to watch a TV show or a movie?</p>
 					<div class="form-check">
 						<input class="form-check-input" type="radio" name="tv-movie" id="select-movie">
-						<label class="form-check-label" for="select-movie">
-							Movie
-						</label>
+						<label class="form-check-label" for="select-movie">Movie</label>
 					</div>
 					<div class="form-check">
 						<input class="form-check-input" type="radio" name="tv-movie" id="select-tv">
-						<label class="form-check-label" for="select-tv">
-							TV Show
-						</label>
+						<label class="form-check-label" for="select-tv">TV Show</label>
 					</div>
 					<div class="form-check">
 						<input class="form-check-input" type="radio" name="tv-movie" id="select-both">
-						<label class="form-check-label" for="select-both">
-							Don't care
-						</label>
+						<label class="form-check-label" for="select-both">Don't care</label>
 					</div>
-
 					<br>
 					<p>What genres are you interested in watching?</p>
 					<div class="form-check">
 						<input class ="form-check-input" type="checkbox" name="genre" value="action" id="genre-action">
-						<label class="form-check-label" for="genre-action">
-							Action
-						</label>
+						<label class="form-check-label" for="genre-action">Action</label>
 					</div>
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" name="genre" value="drama" id="genre-drama">
-						<label class="form-check-label" for="genre-drama">
-							Drama
-						</label>
+						<label class="form-check-label" for="genre-drama">Drama</label>
 					</div>
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" name="genre" value="comedy" id="genre-comedy">
-						<label class="form-check-label" for="genre-comedy">
-							Comedy
-						</label>
+						<label class="form-check-label" for="genre-comedy">Comedy</label>
 					</div>
-					</div>
+				</div>
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" name="genre" value="romance" id="genre-romance">
-						<label class="form-check-label" for="genre-romance">
-							Romance
-						</label>
+						<label class="form-check-label" for="genre-romance">Romance</label>
 					</div>
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" name="genre" value="horror" id="genre-horror">
-						<label class="form-check-label" for="genre-horror">
-							Horror
-						</label>
+						<label class="form-check-label" for="genre-horror">Horror</label>
 					</div>
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" name="genre" value="science-fiction" id="genre-scifi">
-						<label class="form-check-label" for="genre-scifi">
-							Science Fiction
-						</label>
+						<label class="form-check-label" for="genre-scifi">Science Fiction</label>
 					</div>
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" name="genre" value="documentary" id="genre-documentary">
-						<label class="form-check-label" for="genre-documentary">
-							Documentary
-						</label>
+						<label class="form-check-label" for="genre-documentary">Documentary</label>
 					</div>
 					<div class="form-check">
 						<input class="form-check-input" type="checkbox" name="genre" value="sport" id="genre-sports">
-						<label class="form-check-label" for="genre-sports">
-							Sports
-						</label>
+						<label class="form-check-label" for="genre-sports">Sports</label>
 					</div>
-
 					<br>
 					<p>Do you have a content rating preference?</p>
 					<div class="form-check">
 						<input class="form-check-input" type="radio" name="rating" id="no-pref">
-						<label class="form-check-label" for="no-pref">
-							No preference
-						</label>
+						<label class="form-check-label" for="no-pref">No preference</label>
 					</div>
 					<div class="form-check">
 						<input class="form-check-input" type="radio" name="rating" id="restrict-r">
-						<label class="form-check-label" for="restrict-r">
-							Restrict R-rated content
-						</label>
+						<label class="form-check-label" for="restrict-r">Restrict R-rated content</label>
 					</div>
 					<div class="form-check">
 						<input class="form-check-input" type="radio" name="rating" id="restrict-pg13">
-						<label class="form-check-label" for="restrict-pg13">
-							Restrict R-rated and PG-13 content
-						</label>
+						<label class="form-check-label" for="restrict-pg13">Restrict R-rated and PG-13 content</label>
 					</div>
 					<div class="form-check">
 						<input class="form-check-input" type="radio" name="rating" id="restrict-all">
-						<label class="form-check-label" for="restrict-all">
-							Display only G-rated content
-						</label>
+						<label class="form-check-label" for="restrict-all">Display only G-rated content</label>
 					</div>
-
 					<br>
 					<button class="btn btn-primary" id="submit" type="submit">Submit</button>
 				</form>
 			</div>
 		</div>
-
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script type="text/javascript" src="assets/javascript/config.js"></script>
 		<script type="text/javascript" src="assets/javascript/script.js"></script>
